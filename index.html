@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+
+    <!-- bootstrap css link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .display-img {
+            height: 300px;
+        }
+        .card {
+            height: 500px;
+        }
+        #spinner {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <section class="container">
+        <!-- Header Title -->
+        <h1 class="text-center m-2 text-success">
+            Welcome to <span class="text-info">Book Archive</span>
+        </h1>
+        <h3 class="text-center m-2 text-success">Search Your Favourite Book!!!</h3>
+
+        <!-- search box section -->
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input id="search-box" type="text" class="form-control" placeholder="Write Your Book Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button onclick="loadBook()" class="btn btn-outline-secondary" type="button" id="search-button">
+                Search
+            </button>
+        </div>
+        
+        <!--spinner section-->
+        <div id="spinner" class="text-center">
+            <div class="spinner-border text-secondary" role="status"></div>
+            <h5 class="">Loading...</h5>
+        </div>
+
+        <!-- error handling section -->
+        <div id="error-message"></div>
+
+        <!-- number of book have -->
+        <div id="total-result" class="text-center text-secondary mb-3"></div>
+        
+        <!-- Book showing section -->
+        <div id="book-container" class="row row-cols-1 m-3 row-cols-md-3 g-4"></div>
+    </section>
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    
+    <!-- my javascript file link  -->
+    <script src="js/script.js"></script>
+</body>
+</html>
